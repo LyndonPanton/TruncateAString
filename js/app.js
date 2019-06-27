@@ -4,12 +4,12 @@ window.onload = function(event) {
 	document.getElementById("copyright-year").textContent = (new Date()).getFullYear();
 
 	function display(string, length) {
-		document.getElementById("display-truncated").textContent = string;
+		document.getElementById("display-truncated-value").textContent = string;
 
 		if (length) {
 			document.getElementById("display-number-value").textContent = length;
 		} else {
-			document.getElementById("display-number-value").textContent = "";
+			document.getElementById("display-number-value").textContent = "???";
 		}
 	}
 
