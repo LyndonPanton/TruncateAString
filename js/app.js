@@ -3,21 +3,32 @@
 window.onload = function(event) {
 	document.getElementById("copyright-year").textContent = (new Date()).getFullYear();
 
+	function display(string, length) {
+		document.getElementById("display-truncated").textContent = string;
+
+		if (length) {
+			document.getElementById("display-number-value").textContent = length;
+		} else {
+			document.getElementById("display-number-value").textContent = "";
+		}
+	}
+
 	function truncate(string, max) {
+		let length = string.length;
 
 		if (string === "" || max === "") {
-			return "Enter values in both input fields";
+			return display("Enter values in both input fields");
 		} else if (isNaN(max)) {
-			return "The max value must be a number";
+			return display("The max value must be a number");
 		} else if (Number(max) % 1 !== 0) {
-			return "The number must be an integer";
+			return display("The number must be an integer");
 		} else if (Number(max) < 0) {
-			return "The number must be positive";
+			return display("The number must be positive");
 		} else if (string.length > max) {
 			string = string.slice(0, max) + "...";
 		}
 		
-		return string;
+		return display(string, length);
 	}
 
 	let form = document.getElementById("form");
