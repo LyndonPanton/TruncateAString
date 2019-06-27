@@ -28,6 +28,44 @@ header {
 
 
 /* MAIN */
+input {
+	display: block;
+	margin: 0 auto 2vh;
+}
+
+main {
+	padding-top: 10vh;
+}
+
+.input-field {
+	border: 0;
+	border-bottom: 1px #F57653 solid;
+	background-color: transparent;
+	text-align: center;
+	font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-size: 1em;
+	color: black;
+}
+
+.input-field::placeholder {
+	opacity: 0.5;
+	text-align: center;
+	color: black;
+}
+
+#form-submit {
+	border: 2px #F57653 solid;
+	border-radius: 5px;
+	padding: 1.5vh 4vw;
+	background-color: royalblue;
+	font-size: 1em;
+	color: white;
+}
+
+#form-submit:active {
+	border-color: #FDD937;
+	background-color: indianred;
+}
 
 
 
