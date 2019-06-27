@@ -53,6 +53,10 @@ main {
 	color: black;
 }
 
+#display-truncated {
+	padding: 0 10vw;
+}
+
 #form-submit {
 	border: 2px #F57653 solid;
 	border-radius: 5px;
